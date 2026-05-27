@@ -1,15 +1,15 @@
-# Minecraft Beta 1.6.6 - RetroMCP Project
+# Minecraft Beta 1.6.6
 
-Проект для декомпиляции, модификации и сборки клиента и сервера Minecraft Beta 1.6.6 с использованием RetroMCP.
+Кастомная Minecraft версия со своими страшилками. (Beta 1.6.6.6)
 
 ## Требования
 
 - **Операционная система**: Windows Vista и выше
-- **Java**: Java 17 или выше
+- **Java**: Java 17 или выше | Java JDK 8 от Azul Zulu.
 - **Оперативная память**: минимум 1 ГБ ОЗУ
 - **Дисковое пространство**: минимум 500 МБ свободного места
 
-## Структура проекта
+## Структура исходника
 
 ```
 ├── conf/                    # Конфигурационные файлы RetroMCP
@@ -47,21 +47,22 @@
    - `workingDir` - путь к рабочей директории
    - `runargs` - аргументы запуска JVM (по умолчанию -Xms1024M -Xmx1024M)
 
+
 ## Сборка проекта
 
-### Использование командной строки
+### Сборка через .bat файл
 
 Запустите скрипт пересборки:
 ```batch
 recompile.bat
 ```
+Важно: рядом с батником должна быть CLI версия RetroMCP.
 
-### Использование RetroMCP GUI
+### Сборка через RetroMCP
 
-1. Запустите `RetroMCP-Java-GUI.jar`
+1. Запустите RetroMCP
 2. Откройте проект через меню File -> Open
 3. Нажмите кнопку "Build" для компиляции
-4. Используйте "Repack" для упаковки в JAR
 
 ### Параметры сборки
 
@@ -75,50 +76,11 @@ recompile.bat
 
 ### Клиент
 
-Для запуска клиента используйте конфигурацию `Client.launch` в Eclipse или выполните:
-```batch
-java -cp build/minecraft.zip org.mcphackers.launchwrapper.Launch --username Player --uuid - --session - --version b1.6.6 --gameDir . --assetsDir .\assets --assetIndex b1.5 --accessToken - --userProperties {} --userType legacy --versionType release --skinProxy pre-b1.9-pre4
-```
+Для запуска клиента используйте .bat файл.
 
 ### Сервер
 
-Для запуска сервера используйте конфигурацию `Server.launch` в Eclipse или выполните:
+Для запуска сервера используйте server.jar или команду в папке:
 ```batch
-java -cp build/minecraft_server.zip net.minecraft.server.MinecraftServer
+java -jar server.jar nogui
 ```
-
-## Настройка IDE (Eclipse)
-
-1. Импортируйте проекты из папок `minecraft/` и `minecraft_server/`
-2. Убедитесь, что подключены все необходимые библиотеки из папки `libraries/`
-3. Используйте файлы `.launch` для отладки и запуска
-
-## Конфигурация
-
-Основные параметры настраиваются в файлах:
-- `options.cfg` (корень) - общие настройки проекта
-- `minecraft/options.cfg` - настройки клиента
-- `minecraft_server/options.cfg` - настройки сервера
-
-Ключевые параметры:
-- `lang=ENGLISH` - язык интерфейса
-- `theme=com.formdev.flatlaf.FlatDarkLaf` - тема оформления GUI
-- `versionUrl` - URL файла версий
-- `javahome` - путь к JDK (оставьте пустым для использования системной)
-
-## Примечания
-
-- Проект использует маппинги из файла `conf/mappings.tiny`
-- Для корректной работы требуются нативные библиотеки LWJGL
-- Исходные коды расположены в соответствии со структурой пакетов Minecraft Beta 1.6.6
-- Файлы игровых миров и конфиги сохраняются в папке `game/`
-
-## Лицензия
-
-Исходные коды Minecraft являются собственностью Mojang Studios. Данный проект предназначен исключительно для образовательных целей и изучения механизмов работы игры.
-
-## Поддержка
-
-Версия игры: Minecraft Beta 1.6.6  
-Дата релиза: 31 мая 2011 года  
-Схема конфигурации: https://meta.omniarchive.uk/schemas/v1/client.schema.json
