@@ -37,6 +37,8 @@ minecraft_server/bin/
 minecraft_server/reobf/
 minecraft_server/md5/
 minecraft_server/jars/
+minecraft_server/output/
 
 # Рабочие файлы игры (карты, логи, конфиги модов)
 minecraft/game/
+minecraft_server/game
