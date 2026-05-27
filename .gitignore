@@ -26,12 +26,14 @@ doc/
 .classpath
 .project
 .settings/
+.windsurf/
 
 # Папки компиляции внутри /minecraft
 minecraft/bin/
 minecraft/reobf/
 minecraft/md5/
 minecraft/jars/
+minecraft/output/
 
 minecraft_server/bin/
 minecraft_server/reobf/
