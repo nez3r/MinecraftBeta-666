@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "☕ MinecraftServer",
+      "request": "launch",
+      "mainClass": "net.minecraft.server.MinecraftServer",
+      "projectName": "minecraft_server",
+      "vmArgs": "-Dcom.sun.management.jmxremote=false -Djava.awt.headless=true -XX:+DisableAttachMechanism",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "java",
+      "name": "☕ Minecraft",
+      "request": "launch",
+      "mainClass": "net.minecraft.client.Minecraft",
+      "projectName": "minecraft",
+      "vmArgs": "-Dcom.sun.management.jmxremote=false -Djava.awt.headless=true -XX:+DisableAttachMechanism",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "java",
+      "name": "🧪 PlayerControllerTest",
+      "request": "launch",
+      "mainClass": "net.minecraft.src.PlayerControllerTest",
+      "projectName": "minecraft",
+      "vmArgs": "-Dcom.sun.management.jmxremote=false -Djava.awt.headless=true -XX:+DisableAttachMechanism -ea",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

@@ -19,13 +19,13 @@ CLAUDE.md
 doc/
 
 # Настройки среды разработки (IDE) в корне и подпапках
-.idea/
-.vscode/
-*.iml
-.classpath
-.project
-.settings/
-.windsurf/
+#.idea/
+#.vscode/
+#*.iml
+#.classpath
+#.project
+#.settings/
+#.windsurf/
 
 # Папки компиляции внутри /minecraft
 minecraft/bin/
