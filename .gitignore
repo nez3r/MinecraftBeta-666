@@ -1,5 +1,5 @@
 # Скрипты автоматизации и архиваторы
-gitpub.bat
+*.bat
 7z.exe
 7z.dll
 
@@ -9,11 +9,9 @@ RetroMCP-Java-GUI.jar
 
 # Папки сборщика, библиотек и самого сервера
 build/
-conf/
 doc/
 jars/
 libraries/
-minecraft_server/
 freeminecraft/
 
 # Клод и AI-настройки
